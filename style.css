@@ -2,4 +2,24 @@ html body {
     background-color: #1F1F1F;
     color: #D3C7B4;
     margin: 0;
+    font-family: Helvetica;
+}
+
+.nav {
+  text-align: center;
+  margin: 20px 20px;
+}
+
+.nav #logo {
+  float: center;
+  position: relative;
+  height: 20%;
+}
+
+.nav h1 {
+  display: inline;
+  padding: 0px 2%;
+  position: absolute;
+  float: center;
+  text-align: center;
 }
