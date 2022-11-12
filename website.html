@@ -13,7 +13,7 @@
 			<h1> Princeton Fox Sightings </h1>
 		</div>
 		
-		<!-- array to store data from users -->
+		<!-- empty array to store data from users -->
 		
 		<!-- tell user to upload image -->
 		<p>Click on the upload image button to upload a picture:</p>
@@ -22,6 +22,9 @@
 		<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
 		<p><input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)"></p>
 		<p><img id="output" width="100%" /></p>
+		
+		<!-- add image to array -->
+		
 		
 		<!-- computer displays image of fox -->
 		<script>
