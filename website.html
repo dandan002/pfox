@@ -27,7 +27,6 @@
 				console.error(error);
 			};
 			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-			navigator.geolocation.getCurrentPosition(position => {const { latitude, longitude } = position.coords;});
 		</script>
 		
 		<!--if user allows location, continue -->
@@ -59,7 +58,7 @@
 					<label for="file" style="cursor: pointer;"> <img src="images/arrow-up-circle.png" width = "25" title="upCircle" id="up"> Upload Image</label>
 				</div>
 
-		<!-- display image-->		
+		<!-- display image-->
 		<ul>
 			<li id="first">
 				<input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
