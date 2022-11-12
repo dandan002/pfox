@@ -67,41 +67,28 @@ hr {
   padding: 1% 0% 1% 0%;
 }
 
-.foxPhoto {
-  background-color:#333333;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  margin-left: auto;
-  margin-top: 2%;
-  width: 40%;
-  display: inline-block;
-  position: relative;
-}
-
-.foxPhoto #output{
-  width: 50%;
-}
-
 ul {
   padding: 0px 0px;
-  text-align:justify;
+  display: flex;
+  text-align: justify;
+  margin-top: 3%;
 }
 
 li {
   padding: 3% 3%;
   display: inline-block;
   list-style: none;
+  width: 43%;
   background-color:#333333;
   text-decoration: none;
   position: relative;
   margin: auto;
-}
-
-li .third{
-  background-color:#1F1F1F;
+  text-align: center;
+  border-radius: 20px;
 }
 
 li img {
   vertical-align: center;
   position: relative;
+  width: 70%;
 }

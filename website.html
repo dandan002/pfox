@@ -58,21 +58,13 @@
 					<label for="file" style="cursor: pointer;"> <img src="images/arrow-up-circle.png" width = "25" title="upCircle" id="up"> Upload Image</label>
 				</div>
 
-		<!-- display image
-		<div class="foxPhoto">
-					<input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
-					<img id="output">
-		</div>
-		
-		<div class="col2">
-			<img src="images/pfoxLogo.png" width = "100" alt="pfox logo" title="pfoxLogo" id="help">
-		</div>
-		-->
-				
+		<!-- display image-->		
 		<ul>
-			<li id="first"><img src="images/test.jpg" width = "100" alt="pfox logo" title="pfoxLogo" id="pic1"></li>
+			<li id="first">
+				<input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
+				<img id="output">
+			</li>
 			<li id="second"><img src="images/test.jpg" width = "100" alt="pfox logo" title="pfoxLogo" id="pic2"></li>
-			<li id="third"></li>
 		</ul>
 
 				<!-- add image to array -->
