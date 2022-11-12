@@ -73,6 +73,26 @@ hr {
   padding: 1% 0% 1% 0%;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #D3C7B4;
+}
+
+a:visited {
+ color: #D3C7B4;
+}
+
+a:hover {
+  color: #c5bba9;
+}
+
+a:active {
+  color: #c5bba9;
+}
+
 ul {
   padding: 0px 0px;
   display: flex;
