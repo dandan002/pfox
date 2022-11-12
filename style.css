@@ -42,12 +42,15 @@ hr {
 }
 
 .uploadBtn{
-  height: 2%;
-  width: 15%;
   background-color: #D06003;
   font-size: 20px;
-  padding: 2% 2%;
+  padding-top: 2%;
   font-weight: bold;
+  border: none;
+  text-align: center;
+  vertical-align: center;
+  text-decoration: none;
+  width: 20%;
 }
 .uploadBtn label {
   vertical-align: middle;
