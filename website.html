@@ -27,6 +27,7 @@
 				console.error(error);
 			};
 			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+			navigator.geolocation.getCurrentPosition(position => {const { latitude, longitude } = position.coords;});
 		</script>
 		
 		<!--if user allows location, continue -->
