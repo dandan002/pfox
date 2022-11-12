@@ -29,6 +29,7 @@
 				console.error(error);
 			};
 			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+			let latlon = position.coords.latitude + "," + position.coords.longitude;
 		</script>
 		
 		<!--if user allows location, continue -->
@@ -71,7 +72,16 @@
 		</ul>
 
 				<!-- add image to array -->
-		
+				<script>
+					fetch('https://upload.estuary.tech/content/add', {
+						method: "POST",
+						headers: {
+							Authorization: 'Bearer REPLACE_ME_WITH_API_KEY',
+						},
+						body: document.getElementById('output')
+					})
+				</script>
+
 				<!-- computer displays image of fox -->
 				<script>
 				var loadFile = function(event) {
@@ -80,6 +90,23 @@
 				};
 				</script>
 		
+				<!--add to database-->>
+				<script>
+					var MongoClient = require('mongodb').MongoClient;
+					var url = "mongodb+srv://dandan010:dkssud010@cluster0.7c00ea1.mongodb.net/?retryWrites=true&w=majority";
+					MongoClient.connect(url, function(err, db) {
+						if (err) throw err;
+						var dbo = db.db("kaisMom");
+						var myobj = { latlong: latlon};
+						dbo.collection("customers").insertOne(myobj, function(err, res) {
+							if (err) throw err;
+							console.log("1 document inserted");
+							db.close();
+						});
+					});
+
+				</script>
+
 				<!--display the array -->
 		
 			<!--else the user is outside the campus, can't upload image-->
