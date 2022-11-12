@@ -25,14 +25,18 @@ html body {
   margin: 1% 0%;
 }
 
-.head span {
-  color: #D06003;
-}
-
 hr {
   position: relative;
   margin: 2% 0%;
   height: 2px;
   background-color:#333333;
   border: none;
+}
+
+.upload {
+  margin-top: 5%;
+}
+
+.upload span {
+  color: #D06003;
 }
