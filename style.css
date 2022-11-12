@@ -4,6 +4,8 @@ html body {
     margin: 0px 20% 0px 20%;
     font-family: Helvetica;
     text-transform: lowercase;
+    min-height: 100%;
+    font-size: 17px;
 }
 
 .head {
@@ -38,7 +40,7 @@ hr {
   margin-top: 5%;
 }
 
-.upload span {
+span {
   color: #D06003;
 }
 
@@ -125,4 +127,14 @@ li .second {
 li img {
   position: relative;
   width: 70%;
+}
+
+.footerContainer {
+  position: absolute;
+  bottom: 2%;
+  font-size: 16px;
+}
+
+.footerContainer h2 {
+  margin: 1% 0px 1% 0px;
 }
