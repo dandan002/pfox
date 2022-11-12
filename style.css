@@ -53,6 +53,13 @@ hr {
   width: 20%;
   margin-top: 3%;
 }
+
 .uploadBtn label {
   vertical-align: middle;
+}
+
+.uploadBtn #up {
+  padding: 0px 0px;
+  vertical-align: middle;
+  padding-bottom: 1%;
 }
