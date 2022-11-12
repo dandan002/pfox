@@ -13,9 +13,12 @@
 			<h1> Princeton Fox Sightings </h1>
 		</div>
 		
+		<!-- tell user to upload image -->
+		<p>Click on the upload image button to upload a picture or video:</p>
+		
 		<!-- user uploads image of fox -->
-		<p><input type="file"  accept="image/*, video/*" name="image" id="file" onchange="loadFile(event)"></p>
 		<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+		<p><input type="file"  accept="image/*, video/*" name="image" id="file" onchange="loadFile(event)"></p>
 		<p><img id="output" width="200%" /></p>
 		
 		<!-- computer displays image of fox -->
