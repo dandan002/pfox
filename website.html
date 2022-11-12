@@ -31,66 +31,64 @@
 		
 		<!--if user allows location, continue -->
 			<!--if user is within princeton campus, add location of user to the array and allow user to upload image-->
-		
-			<!--else the user is outside the campus, can't upload image-->
-		
-		<!--else, they just look at the pics of foxes ^-^ -->
-		
-		
-		<!--get time and date of user -->
-			<!--define where the date/time should be shown in the HTML page -->
-			<p>Date/Time: <span id="datetime"></span></p>
+				
+				<!--get time and date of user -->
+				<!--define where the date/time should be shown in the HTML page 
+				<p>Date/Time: <span id="datetime"></span></p> -->
 			
-			<!-- assign the date/time to the content of the element -->
-			<script>
-			var dt = new Date();
-			document.getElementById("datetime").innerHTML = dt.toLocaleString();
-			</script>
+				<!-- assign the date/time to the content of the element
+				<script>
+				var dt = new Date();
+				document.getElementById("datetime").innerHTML = dt.toLocaleString();
+				</script> -->
 		
-		<!--add time and date of user to the arrat!! -->
-		
-		<!-- tell user to upload image -->
-		<div class = "upload">
-			<h2>The world needs fox pictures.</h2>
-			<p> <span>Share your pictures with the world!</span> Lorem ipsum dolor sit amet, consectetur 
+				<!--add time and date of user to the arrat!! -->
+			
+				<!-- tell user to upload image -->
+				<div class = "upload">
+				<h2>The world needs fox pictures.</h2>
+				<p> <span>Share your pictures with the world!</span> Lorem ipsum dolor sit amet, consectetur 
 				adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
 				aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
 				nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
-		</div>
+				</div>
 		
-		<!-- user upload button -->
-		<div class="uploadBtn">
-			<label for="file" style="cursor: pointer;"> <img src="images/arrow-up-circle.png" width = "25" title="upCircle" id="up"> Upload Image</label>
-		</div>
+				<!-- user upload button -->
+				<div class="uploadBtn">
+					<label for="file" style="cursor: pointer;"> <img src="images/arrow-up-circle.png" width = "25" title="upCircle" id="up"> Upload Image</label>
+				</div>
 
 		<!-- display image
 		<div class="foxPhoto">
-			<input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
-			<img id="output">
+					<input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
+					<img id="output">
 		</div>
 		
 		<div class="col2">
 			<img src="images/pfoxLogo.png" width = "100" alt="pfox logo" title="pfoxLogo" id="help">
 		</div>
 		-->
-		
+				
 		<ul>
 			<li><img src="images/pfoxLogo.png" width = "100" alt="pfox logo" title="pfoxLogo" id="help"></li>
 			<li><img src="images/pfoxLogo.png" width = "100" alt="pfox logo" title="pfoxLogo" id="help"></li>
 		</ul>
 
-		<!-- add image to array -->
+				<!-- add image to array -->
 		
+				<!-- computer displays image of fox -->
+				<script>
+				var loadFile = function(event) {
+				var image = document.getElementById('output');
+				image.src = URL.createObjectURL(event.target.files[0]);
+				};
+				</script>
 		
-		<!-- computer displays image of fox -->
-		<script>
-		var loadFile = function(event) {
-		var image = document.getElementById('output');
-		image.src = URL.createObjectURL(event.target.files[0]);
-		};
-		</script>
+				<!--display the array -->
 		
+			<!--else the user is outside the campus, can't upload image-->
 		
-		<!--display the array -->
+		<!--else, they just look at the pics of foxes ^-^ -->
+		
 	</body>
 </html>
