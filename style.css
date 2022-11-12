@@ -86,7 +86,6 @@ li {
   margin-right: auto;
   margin-left: auto;
   align-items: center;
-  justify-items: center;
 }
 
 li .first {
@@ -100,5 +99,4 @@ li .second {
 li img {
   position: relative;
   width: 70%;
-  align-items: center;
 }
