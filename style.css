@@ -88,11 +88,11 @@ a:visited {
 }
 
 a:hover {
-  color: #c5bba9;
+  color: #b6aa96;
 }
 
 a:active {
-  color: #c5bba9;
+  color: #b6aa96;
 }
 
 ul {
@@ -114,6 +114,7 @@ li {
   margin-right: auto;
   margin-left: auto;
   align-items: center;
+  margin-bottom: 5%;
 }
 
 li .first {
@@ -129,12 +130,12 @@ li img {
   width: 70%;
 }
 
-.footerContainer {
+.footer1 {
   position: absolute;
-  bottom: 2%;
+  bottom: 0;
   font-size: 16px;
 }
 
-.footerContainer h2 {
-  margin: 1% 0px 1% 0px;
+.footer2 {
+  font-size: 16px;
 }
