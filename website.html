@@ -59,26 +59,19 @@
 				</div>
 					<input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
 					<img id="output" width="100%">
+				
+				<!-- add image to array -->
+				<!-- computer displays image of fox -->
+				<script>
+				var loadFile = function(event) {
+				var image = document.getElementById('output');
+				image.src = URL.createObjectURL(event.target.files[0]);
+				};
+				</script>
+				<!--display the array -->
 			<!--else the user is outside the campus, can't upload image-->
 		
 		<!--else, they just look at the pics of foxes ^-^ -->
 		
-		
-		
-		
-		
-		<!-- add image to array -->
-		
-		
-		<!-- computer displays image of fox -->
-		<script>
-		var loadFile = function(event) {
-		var image = document.getElementById('output');
-		image.src = URL.createObjectURL(event.target.files[0]);
-		};
-		</script>
-		
-		
-		<!--display the array -->
 	</body>
 </html>
