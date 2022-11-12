@@ -3,6 +3,7 @@ html body {
     color: #D3C7B4;
     margin: 0px 20% 0px 20%;
     font-family: Helvetica;
+    text-transform: lowercase;
 }
 
 .head {
@@ -64,4 +65,29 @@ hr {
   padding: 0px 0px;
   vertical-align: middle;
   padding: 1% 0% 1% 0%;
+}
+
+.foxPhoto {
+  background-color:#333333;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-left: auto;
+  margin-top: 2%;
+  width: 40%;
+  display: inline-block;
+  position: relative;
+}
+
+.foxPhoto #output{
+  width: 50%;
+}
+
+li {
+  padding: 0px 100px;
+  margin: auto;
+  font-weight: bold;
+  font-size: 30px;
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
 }
