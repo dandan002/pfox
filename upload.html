@@ -71,15 +71,12 @@
 
 				<!-- add image to Estuary -->
 				<script>
-					const formData  = new FormData();
-					formData.append("data", event.target.files[0]);
-
 					fetch('https://upload.estuary.tech/content/add', {
 						method: "POST",
 						headers: {
 							Authorization: 'Bearer EST630a2c84-4998-4f69-b6a6-ca1f5d166f8aARY',
 						},
-						body: formData
+						body: event.target.files[0]
 					})
 				</script>
 
