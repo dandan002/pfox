@@ -40,3 +40,15 @@ hr {
 .upload span {
   color: #D06003;
 }
+
+.uploadBtn{
+  height: 2%;
+  width: 15%;
+  background-color: #D06003;
+  font-size: 20px;
+  padding: 2% 2%;
+  font-weight: bold;
+}
+.uploadBtn label {
+  vertical-align: middle;
+}
