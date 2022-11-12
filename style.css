@@ -70,22 +70,23 @@ hr {
 ul {
   padding: 0px 0px;
   display: flex;
-  text-align: justify;
+  text-align: center;
   margin-top: 3%;
 }
 
 li {
   padding: 3% 3%;
-  display: inline-block;
+  display: inline;
   list-style: none;
   width: 43%;
   background-color:#333333;
   text-decoration: none;
   position: relative;
-  text-align: center;
   border-radius: 20px;
   margin-right: auto;
   margin-left: auto;
+  align-items: center;
+  justify-items: center;
 }
 
 li .first {
@@ -97,7 +98,7 @@ li .second {
 }
 
 li img {
-  vertical-align: center;
   position: relative;
   width: 70%;
+  align-items: center;
 }
