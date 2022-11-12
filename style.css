@@ -82,12 +82,26 @@ hr {
   width: 50%;
 }
 
+ul {
+  padding: 0px 0px;
+  text-align:justify;
+}
+
 li {
-  padding: 0px 100px;
-  margin: auto;
-  font-weight: bold;
-  font-size: 30px;
+  padding: 3% 3%;
   display: inline-block;
   list-style: none;
+  background-color:#333333;
   text-decoration: none;
+  position: relative;
+  margin: auto;
+}
+
+li .third{
+  background-color:#1F1F1F;
+}
+
+li img {
+  vertical-align: center;
+  position: relative;
 }
