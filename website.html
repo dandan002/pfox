@@ -32,6 +32,14 @@
 		<!--add location of user to the array if user is within princeton campus-->
 		
 		<!--get time and date of user -->
+			<!--define where the date/time should be shown in the HTML page -->
+			<p>Date/Time: <span id="datetime"></span></p>
+			
+			<!-- assign the date/time to the content of the element -->
+			<script>
+			var dt = new Date();
+			document.getElementById("datetime").innerHTML = dt.toLocaleString();
+			</script>
 		
 		<!--add time and date of user to the arrat!! -->
 		
