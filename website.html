@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<!--website title-->
 	<title>Princeton Fox</title>
+</head> 
 	<body>
 		<!--logo -->
 		<div class="nav">
@@ -15,10 +16,26 @@
 		
 		<hr>
 
+		<!-- empty array to store data from users -->
+		
+		<!--get location of user -->
+		
+		<!--add location of user to the array if user is within princeton campus-->
+		
+		<!--get time and date of user -->
+		
+		<!--add time and date of user to the arrat!! -->
+		
+		<!-- tell user to upload image -->
+		<p>Click on the upload image button to upload a picture:</p>
+		
 		<!-- user uploads image of fox -->
-		<p><input type="file"  accept="image/heic, image/jpeg, image/png" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
 		<p><label for="file" style="cursor: pointer;">Upload Image</label></p>
-		<p><img id="output" width="200%" /></p>
+		<p><input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)"></p>
+		<p><img id="output" width="100%" /></p>
+		
+		<!-- add image to array -->
+		
 		
 		<!-- computer displays image of fox -->
 		<script>
@@ -27,6 +44,8 @@
 		image.src = URL.createObjectURL(event.target.files[0]);
 		};
 		</script>
+		
+		
+		<!--display the array -->
 	</body>
-</head> 
 </html>
