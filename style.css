@@ -5,13 +5,13 @@ html body {
     font-family: Helvetica;
 }
 
-.nav {
+.head {
   margin: 5% 0% 0% 0%;
   padding: 0px 0px;
   display: flex;
 }
 
-.nav #logo {
+.head #logo {
   position: relative;
   height: 1.5%;
   margin-right: 2%;
@@ -19,13 +19,13 @@ html body {
   vertical-align: middle;
 }
 
-.nav h1 {
+.head h1 {
   position: relative;
   display: inline-block;
   margin: 1% 0%;
 }
 
-.nav span {
+.head span {
   color: #D06003;
 }
 
