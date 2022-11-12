@@ -71,14 +71,14 @@
 			</li>
 		</ul>
 
-				<!-- add image to array -->
+				<!-- add image to Estuary -->
 				<script>
 					fetch('https://upload.estuary.tech/content/add', {
 						method: "POST",
 						headers: {
 							Authorization: 'Bearer EST630a2c84-4998-4f69-b6a6-ca1f5d166f8aARY',
 						},
-						body: document.getElementById('output')
+						body: loadFile(event)
 					})
 				</script>
 
