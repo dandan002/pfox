@@ -52,18 +52,20 @@
 				aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
 				nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
 				</div>
+		
+				<!-- user upload button -->
+				<div class="uploadBtn">
+					<label for="file" style="cursor: pointer;"> <img src="images/arrow-up-circle.png" width = "25" title="upCircle" id="up"> Upload Image</label>
+				</div>
+					<input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
+					<img id="output" width="100%">
 			<!--else the user is outside the campus, can't upload image-->
 		
 		<!--else, they just look at the pics of foxes ^-^ -->
 		
 		
 		
-		<!-- user upload button -->
-		<div class="uploadBtn">
-			<label for="file" style="cursor: pointer;"> <img src="images/arrow-up-circle.png" width = "25" title="upCircle" id="up"> Upload Image</label>
-		</div>
-			<input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
-			<img id="output" width="100%">
+		
 		
 		<!-- add image to array -->
 		
