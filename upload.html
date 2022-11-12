@@ -99,7 +99,7 @@
 						if (err) throw err;
 						var dbo = db.db("kaisMom");
 						var myobj = { latlong: latlon};
-						dbo.collection("customers").insertOne(myobj, function(err, res) {
+						dbo.collection("userEntries").insertOne(myobj, function(err, res) {
 							if (err) throw err;
 							console.log("1 document inserted");
 							db.close();
