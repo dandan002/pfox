@@ -1,12 +1,24 @@
-var http = require('http');
-var fs = require('fs');
-http.createServer(function (req, res) {
-  fs.readFile('index.html', function(err, data) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(data);
-    return res.end();
-  });
-}).listen(8080);
+const express = require('express');
+const app = express();
+app.use(express.static('static/images'));
+const path = require('path');
+const router = express.Router();
+
+router.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
+  //__dirname : It will resolve to your project folder.
+});
+
+router.get('/upload',function(req,res){
+  res.sendFile(path.join(__dirname+'/upload.html'));
+});
+
+//add the router
+app.use('/', router);
+app.listen(process.env.port || 3000);
+
+console.log('Running at Port 3000');
+
 
 /*let latlon = "";
 			const successCallback = (position) => {
