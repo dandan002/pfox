@@ -30,24 +30,33 @@
 			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 			
   			let latlon = GeolocationCoordinates.latitude + "," + GeolocationCoordinates.longitude;
-			const { MongoClient } = require('mongodb');
-			async function main() {
-    			const uri = "mongodb+srv://dandan010:dkssud010@cluster0.7c00ea1.mongodb.net/?retryWrites=true&w=majority";
-    			const client = new MongoClient(uri);
-    			try {
-       			 // Connect to the MongoDB cluster
-        			await client.connect();
-        			await createListing(client,
-            			{
-                			latlong: latlon,
-            			}
-        			);
-    			} catch (e) {
-        			console.error(e);
-    			} finally {
-        			await client.close();
-    			}
-			}
+			  const { MongoClient } = require("mongodb");
+// Connection URI
+const uri =
+  "mongodb+srv://dandan010:dkssud010@cluster0.7c00ea1.mongodb.net/?retryWrites=true&w=majority";
+// Create a new MongoClient
+const client = new MongoClient(uri);
+async function run() {
+  try {
+    // Connect the client to the server (optional starting in v4.7)
+    await client.connect();
+    // Establish and verify connection
+    await client.db("kaisMom").command({ ping: 1 });
+    dbo = client.db("kaisMom");
+    console.log("Connected successfully to server");
+
+    const doc = { latlong: latlon };
+    const collection = client.db("kaisMom").collection("userEntries");
+    const result = await collection.insertOne(doc);
+    console.log(
+        `A document was inserted with the _id: ${result.insertedId}`,
+        );
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
 		</script>
 		
 		<!--if user allows location, continue -->
