@@ -6,11 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="daniel.js"></script> 
 	<!--website title-->
-	<title>Upload Fox Photos</title>
+	<title>Princeton Fox Sightings</title>
 </head> 
 <body>
 		<!--logo -->
-		<div class="head">
+		<div class="head" id="head">
 			<img src="images/pfoxLogo.png" width = "50" alt="pfox logo" title="pfoxLogo" id="logo">
 			<a href="index.html"> 
 				<h1> Princeton Fox Sightings</h1>
@@ -19,84 +19,17 @@
 		
 		<hr>
 		
-		<!--get location of user -->
-		<script>
-			let latlon = "";
-			const successCallback = (position) => {
-				console.log(position);
-				latlon += position.coords.latitude + "," + position.coords.longitude;
-				console.log(latlon);
-			};
-			const errorCallback = (error) => {
-				console.error(error);
-			};
-			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-			
-		</script>
-		
-		<!--if user allows location, continue -->
-			<!--if user is within princeton campus, add location of user to the array and allow user to upload image-->
-				
-				<!--get time and date of user -->
-				<!--define where the date/time should be shown in the HTML page 
-				<p>Date/Time: <span id="datetime"></span></p> -->
-			
-				<!-- assign the date/time to the content of the element
-				<script>
-				var dt = new Date();
-				document.getElementById("datetime").innerHTML = dt.toLocaleString();
-				</script> -->
-		
-				<!--add time and date of user to the arrat!! -->
-			
-				<!-- tell user to upload image -->
-				<div class = "upload">
-				<h2>The world needs fox pictures.</h2>
-				<p> <span>Share your pictures with the world!</span> please help us by allowing access to your location. The information we collect can contribute to more informed natural resource management decisions and aids local animal control in keeping princeton and its residents safe. 
-				</p>
-				</div>
-		
-				<!-- user upload button -->
-				<div class="uploadBtn">
-					<label for="file" style="cursor: pointer;" id="uploadButton"> <img src="images/arrow-up-circle.png" width = "25" title="upCircle" id="up"> Upload here</label>
-				</div>
-
-		<!-- display image-->
-		<div class="imageDisplay">
-			<ul>
-				<li id="first">
-					<input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
-					<img id="output">
-				</li>
-				<li id="second"><img src="images/foxButterfly.jpeg" width = "100" id="pic2">
-					<br><br>
-					<img src="images/closeFox.jpeg" width = "100" id="pic3">
-				</li>
-			</ul>
+		<!-- tell user to upload image -->
+		<div class = "upload">
+			<h2>The world needs fox pictures.</h2>
+			<p> <span>Share your pictures with the world!</span> please help us by allowing access to your location. The information we collect can contribute to more informed natural resource management decisions and aids local animal control in keeping princeton and its residents safe. 
+			</p>
 		</div>
-
-
-				<!-- computer displays image of fox -->
-				<script>
-				var loadFile = function(event) {
-				var image = document.getElementById('output');
-				image.src = URL.createObjectURL(event.target.files[0]);
-				};
-
-				fetch('https://upload.estuary.tech/content/add', {
-					method: "POST",
-					headers: {
-						Authorization: 'Bearer EST630a2c84-4998-4f69-b6a6-ca1f5d166f8aARY',
-					},
-					body: image
-				}).then((response) => {
-					console.log(response);
-				});
-				</script>
 		
-			<!--else the user is outside the campus, can't upload image-->
-		
-		<!--else, they just look at the pics of foxes ^-^ -->
+		<!-- user upload button -->
+		<div class="uploadBtn">
+			<label for="file" style="cursor: pointer;" id="uploadButton"> <img src="images/arrow-right-circle.png" width = "25" title="rightCircle" id="right"> Upload here</label>
+		</div>
 
 		<!-- footer -->
 			<footer class="footer2">
