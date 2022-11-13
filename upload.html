@@ -58,16 +58,18 @@
 				</div>
 
 		<!-- display image-->
-		<ul>
-			<li id="first">
-				<input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
-				<img id="output">
-			</li>
-			<li id="second"><img src="images/foxButterfly.jpeg" width = "100" id="pic2">
-				<br><br>
-				<img src="images/closeFox.jpeg" width = "100" id="pic3">
-			</li>
-		</ul>
+		<div class="imageDisplay">
+			<ul>
+				<li id="first">
+					<input type="file"  accept="image/*" name="image" id="file" style="display: none;" onchange="loadFile(event)">
+					<img id="output">
+				</li>
+				<li id="second"><img src="images/foxButterfly.jpeg" width = "100" id="pic2">
+					<br><br>
+					<img src="images/closeFox.jpeg" width = "100" id="pic3">
+				</li>
+			</ul>
+		</div>
 
 				<!-- add image to Estuary -->
 				<script>
