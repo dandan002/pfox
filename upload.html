@@ -42,10 +42,7 @@
         			await client.connect();
         			await createListing(client,
             			{
-                			name: "Lovely Loft",
-                			summary: "A charming loft in Paris",
-                			bedrooms: 1,
-                			bathrooms: 1
+                			latlong: latlon,
             			}
         			);
     			} catch (e) {
