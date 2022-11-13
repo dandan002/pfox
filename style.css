@@ -167,10 +167,12 @@ footer p {
 
 #end1 {
   float: left;
+  padding-bottom: 3%;
 }
 
 #end2 {
   float: right;
+  padding-bottom: 3%;
 }
 
 footer a:link {
