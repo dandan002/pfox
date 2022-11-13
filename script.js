@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-app.use(express.static(_dirname));
+app.use(express.static("images"));
 app.get('/style.css', function(req, res) {
   res.sendFile(__dirname + "/" + "style.css");
 });
