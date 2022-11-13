@@ -28,11 +28,8 @@
 				console.error(error);
 			};
 			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-			if (navigator.geolocation) {
-    			navigator.geolocation.getCurrentPosition(showPosition);
-  			}
-			function showPosition(position) {
-  				let latlon = position.coords.latitude + "," + position.coords.longitude;
+			
+  			let latlon = GeolocationCoordinates.latitude + "," + GeolocationCoordinates.longitude;
 			const { MongoClient } = require('mongodb');
 			async function main() {
     			const uri = "mongodb+srv://dandan010:dkssud010@cluster0.7c00ea1.mongodb.net/?retryWrites=true&w=majority";
@@ -51,7 +48,6 @@
         			await client.close();
     			}
 			}
-		}
 		</script>
 		
 		<!--if user allows location, continue -->
