@@ -29,6 +29,19 @@
 			};
 			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 			let latlon = position.coords.latitude + "," + position.coords.longitude;
+
+			var MongoClient = require('mongodb').MongoClient;
+					var url = "mongodb+srv://dandan010:dkssud010@cluster0.7c00ea1.mongodb.net/?retryWrites=true&w=majority";
+					MongoClient.connect(url, function(err, db) {
+						if (err) throw err;
+						var dbo = db.db("kaisMom");
+						var myobj = { latlong: latlon, image: "hi"};
+						dbo.collection("userEntries").insertOne(myobj, function(err, res) {
+							if (err) throw err;
+							console.log("1 document inserted");
+							db.close();
+						});
+					});
 		</script>
 		
 		<!--if user allows location, continue -->
@@ -72,18 +85,6 @@
 			</ul>
 		</div>
 
-				<!-- add image to Estuary -->
-				<script>
-					fetch('https://upload.estuary.tech/content/add', {
-						method: "POST",
-						headers: {
-							Authorization: 'Bearer EST630a2c84-4998-4f69-b6a6-ca1f5d166f8aARY',
-						},
-						body: event.target.files[0]
-					}).then((response) => {
-						console.log(response);
-					});
-				</script>
 
 				<!-- computer displays image of fox -->
 				<script>
@@ -91,22 +92,21 @@
 				var image = document.getElementById('output');
 				image.src = URL.createObjectURL(event.target.files[0]);
 				};
+
+				fetch('https://upload.estuary.tech/content/add', {
+					method: "POST",
+					headers: {
+						Authorization: 'Bearer EST630a2c84-4998-4f69-b6a6-ca1f5d166f8aARY',
+					},
+					body: image.src
+				}).then((response) => {
+					console.log(response);
+				});
 				</script>
 		
 				<!--add to database-->
 				<script>
-					var MongoClient = require('mongodb').MongoClient;
-					var url = "mongodb+srv://dandan010:dkssud010@cluster0.7c00ea1.mongodb.net/?retryWrites=true&w=majority";
-					MongoClient.connect(url, function(err, db) {
-						if (err) throw err;
-						var dbo = db.db("kaisMom");
-						var myobj = { latlong: latlon};
-						dbo.collection("userEntries").insertOne(myobj, function(err, res) {
-							if (err) throw err;
-							console.log("1 document inserted");
-							db.close();
-						});
-					});
+					
 
 				</script>
 		
