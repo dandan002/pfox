@@ -1,5 +1,7 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+
 app.use(express.static("images"));
 app.get('/style.css', function(req, res) {
   res.sendFile(__dirname + "/" + "style.css");
@@ -16,8 +18,11 @@ app.get('/upload.html',function(req,res){
 });
 
 app.listen(process.env.port || 3000);
-
 console.log('Running at Port 3000');
+
+
+
+
 
 
 /*let latlon = "";
