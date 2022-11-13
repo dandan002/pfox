@@ -1,3 +1,14 @@
+let latlon = "";
+			const successCallback = (position) => {
+				console.log(position);
+				latlon += position.coords.latitude + "," + position.coords.longitude;
+				console.log(latlon);
+			};
+			const errorCallback = (error) => {
+				console.error(error);
+			};
+			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
 const { MongoClient } = require("mongodb");
 // Connection URI
 const uri =
@@ -12,7 +23,7 @@ async function run() {
     await client.db("kaisMom").command({ ping: 1 });
     console.log("Connected successfully to server");
 
-    const doc = { name: "Neapolitan pizza", shape: "round" };
+    const doc = { latlong: latlon };
     const collection = client.db("kaisMom").collection("userEntries");
     const result = await collection.insertOne(doc);
     console.log(
