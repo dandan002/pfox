@@ -133,14 +133,6 @@ a:active {
   width: 70%;
 }
 
-.footer1 {
-  font-size: 16px;
-}
-
-.footer2 {
-  font-size: 16px;
-}
-
 .mapSection {
   text-align: left;
 }
@@ -163,23 +155,32 @@ a:active {
   border: 0;
 }
 
-.footer1 ul {
-  padding: 0px 0px;
-  height: 8%;
+footer {
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 3%;
 }
 
-.footer1 li {
-  display: inline;
-  list-style: none;
-  text-decoration: none;
+#end1 {
+  float: left;
 }
 
-.footer1 #copyright {
-  vertical-align: top;
-  width: 70%;
+#end2 {
+  float: right;
 }
 
-.footer1 #scroll {
-  text-align: right;
-  vertical-align: top;
+footer a:link {
+  color: #D06003;
+}
+
+footer a:visited {
+ color: #D06003;
+}
+
+footer a:hover {
+  color: #b55303;
+}
+
+footer a:active {
+  color: #b6aa96;
 }
