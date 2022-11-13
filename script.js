@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-app.use(express.static('static/images'));
+app.use(express.static('images'));
 const path = require('path');
 const router = express.Router();
 
