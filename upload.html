@@ -21,10 +21,12 @@
 		
 		<!--get location of user -->
 		<script>
-			let latlon = "";
+			let lati = 0.0;
+			let longi = 0.0;
 			const successCallback = (position) => {
 				console.log(position);
-				latlon += position.coords.latitude + "," + position.coords.longitude;
+				lati = position.coords.latitude;
+				longi = position.coords.longitude
 				console.log(latlon);
 			};
 			const errorCallback = (error) => {
@@ -32,6 +34,16 @@
 			};
 			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 			
+			const loca = { lat: lati, lng: longi };
+			// The map, centered at Uluru
+			const map = new google.maps.Map(document.getElementById("map"), {
+				zoom: 4,
+				center: loca,
+			});
+			const marker = new google.maps.Marker({
+				position: loca,
+				map: map,
+			});
 		</script>
 		
 		<!--if user allows location, continue -->
