@@ -8,7 +8,7 @@ http.createServer(function (req, res) {
   });
 }).listen(8080);
 
-let latlon = "";
+/*let latlon = "";
 			const successCallback = (position) => {
 				console.log(position);
 				latlon += position.coords.latitude + "," + position.coords.longitude;
@@ -44,4 +44,4 @@ async function run() {
     await client.close();
   }
 }
-run().catch(console.dir);
+run().catch(console.dir);*/
