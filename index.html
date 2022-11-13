@@ -21,24 +21,17 @@
 		
 		<!--get location of user -->
 		<script>
+			let latlon = "";
 			const successCallback = (position) => {
 				console.log(position);
+				latlon += position.coords.latitude + "," + position.coords.longitude;
+				console.log(latlon);
 			};
 			const errorCallback = (error) => {
 				console.error(error);
 			};
 			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 			
-			let latlon = "";
-			function getLocation() {
-				if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(showPosition);
-				}
-			}
-			function showPosition(position) {
-  				latlon += position.coords.latitude + "," + position.coords.longitude;
-			}
-			console.log(latlon);
 		</script>
 		
 		<!--if user allows location, continue -->
@@ -95,7 +88,7 @@
 					headers: {
 						Authorization: 'Bearer EST630a2c84-4998-4f69-b6a6-ca1f5d166f8aARY',
 					},
-					body: image.src
+					body: image
 				}).then((response) => {
 					console.log(response);
 				});
