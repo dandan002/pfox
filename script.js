@@ -20,6 +20,25 @@ app.get('/upload.html',function(req,res){
 app.listen(process.env.port || 3000);
 console.log('Running at Port 3000');
 
+app.post('/example', (req, res) => {
+  let image = req.body.foxPhoto;
+  fetch('https://upload.estuary.tech/content/add', {
+					method: "POST",
+					headers: {
+						Authorization: 'Bearer EST630a2c84-4998-4f69-b6a6-ca1f5d166f8aARY',
+					},
+					body: image
+				}).then((response) => {
+					console.log(response);
+				});
+});
+
+const port = 8080;
+
+app.listen(port, () => {
+  console.log(`Server running on port${port}`);
+});
+
 
 
 
