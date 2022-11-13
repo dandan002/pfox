@@ -29,7 +29,16 @@
 			};
 			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 			
-  			let latlon = GeolocationCoordinates.latitude + "," + GeolocationCoordinates.longitude;
+			let latlon = "";
+			function getLocation() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition);
+				}
+			}
+			function showPosition(position) {
+  				latlon += position.coords.latitude + "," + position.coords.longitude;
+			}
+			console.log(latlon);
 		</script>
 		
 		<!--if user allows location, continue -->
