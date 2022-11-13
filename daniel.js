@@ -10,7 +10,6 @@ async function run() {
     await client.connect();
     // Establish and verify connection
     await client.db("kaisMom").command({ ping: 1 });
-    dbo = client.db("kaisMom");
     console.log("Connected successfully to server");
 
     const doc = { name: "Neapolitan pizza", shape: "round" };
