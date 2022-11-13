@@ -7,6 +7,7 @@ html body {
     min-height: 100%;
     min-width: 60%;
     font-size: 17px;
+    scroll-behavior: smooth;
 }
 
 .head {
@@ -58,6 +59,7 @@ span {
   width: 20%;
   margin-top: 3%;
   border-radius: 10px;
+  margin-bottom: 3.5%;
 }
 
 .uploadBtn label {
@@ -96,14 +98,14 @@ a:active {
   color: #b6aa96;
 }
 
-ul {
+.imageDisplay ul {
   padding: 0px 0px;
   display: flex;
   text-align: center;
   margin-top: 3%;
 }
 
-li {
+.imageDisplay li {
   padding: 3% 3%;
   display: inline;
   list-style: none;
@@ -118,26 +120,34 @@ li {
   margin-bottom: 5%;
 }
 
-li .first {
+.first li {
   vertical-align: top;
 }
 
-li .second {
+.second li {
   vertical-align: top;
 }
 
-li img {
+.imageDisplay img {
   position: relative;
   width: 70%;
 }
 
 .footer1 {
-  bottom: 0;
   font-size: 16px;
 }
 
 .footer2 {
   font-size: 16px;
+}
+
+.mapSection {
+  text-align: left;
+}
+
+.mapSection hr {
+  width: 30%;
+  margin-top: 3%;
 }
 
 .map {
@@ -149,6 +159,27 @@ li img {
 
 .map iframe {
   position: relative;
-  margin: 5% auto 5% auto;
+  margin: 2% auto 5% auto;
   border: 0;
+}
+
+.footer1 ul {
+  padding: 0px 0px;
+  height: 8%;
+}
+
+.footer1 li {
+  display: inline;
+  list-style: none;
+  text-decoration: none;
+}
+
+.footer1 #copyright {
+  vertical-align: top;
+  width: 70%;
+}
+
+.footer1 #scroll {
+  text-align: right;
+  vertical-align: top;
 }
