@@ -8,7 +8,33 @@
 	<title>Princeton Fox Sightings</title>
 </head> 
 <body>
-		<!--logo -->
+	<script>
+		let lati = 0.0;
+		let longi = 0.0;
+		const successCallback = (position) => {
+			console.log(position);
+			lati = position.coords.latitude;
+			longi = position.coords.longitude
+			console.log(latlon);
+		};
+		const errorCallback = (error) => {
+			console.error(error);
+		};
+		navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+		
+		const loca = { lat: lati, lng: longi };
+		// The map, centered at Uluru
+		const map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 4,
+			center: loca,
+		});
+		const marker = new google.maps.Marker({
+			position: loca,
+			map: map,
+		});
+	</script>	
+	
+	<!--logo -->
 		<div class="head" id="head">
 			<img src="pfoxLogo.png" width = "50" alt="pfox logo" title="pfoxLogo" id="logo">
 			<a href="index.html"> 
