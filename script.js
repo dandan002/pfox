@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 app.use(express.static('images'));
+app.get('/style.css', function(req, res) {
+  res.sendFile(__dirname + "/" + "style.css");
+});
 const path = require('path');
 const router = express.Router();
 
