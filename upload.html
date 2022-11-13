@@ -58,17 +58,7 @@
 		
 				<!-- user upload button -->
 				<div class="uploadBtn">
-
-					<form action="http://localhost:8080/example" method="POST">
-						<label for="foxPhoto" id="uploadButton"> 
-							<img src="arrow-up-circle.png" width = "25" title="upCircle" id="up"> 
-							Upload here 
-							<input type="file" id="foxPhoto" name="foxPhoto" accept="image/*"> 
-						</label>
-					</form>
-
-
-					<!--<label for="file" style="cursor: pointer;" id="uploadButton"> <img src="arrow-up-circle.png" width = "25" title="upCircle" id="up"> Upload here</label>-->
+					<label for="file" style="cursor: pointer;" id="uploadButton"> <img src="arrow-up-circle.png" width = "25" title="upCircle" id="up"> Upload here</label>
 				</div>
 
 		<!-- display image-->
@@ -91,6 +81,16 @@
 				var image = document.getElementById('output');
 				image.src = URL.createObjectURL(event.target.files[0]);
 				};
+
+				fetch('https://upload.estuary.tech/content/add', {
+					method: "POST",
+					headers: {
+						Authorization: 'Bearer EST630a2c84-4998-4f69-b6a6-ca1f5d166f8aARY',
+					},
+					body: image.src
+				}).then((response) => {
+					console.log(response);
+				});
 				</script>
 		
 			<!--else the user is outside the campus, can't upload image-->
