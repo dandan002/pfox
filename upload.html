@@ -28,21 +28,33 @@
 				console.error(error);
 			};
 			navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-			let latlon = position.coords.latitude + "," + position.coords.longitude;
-
-			<!--add to database-->
-			var MongoClient = require('mongodb').MongoClient;
-					var url = "mongodb+srv://dandan010:dkssud010@cluster0.7c00ea1.mongodb.net/?retryWrites=true&w=majority";
-					MongoClient.connect(url, function(err, db) {
-						if (err) throw err;
-						var dbo = db.db("kaisMom");
-						var myobj = { latlong: latlon, image: "hi"};
-						dbo.collection("userEntries").insertOne(myobj, function(err, res) {
-							if (err) throw err;
-							console.log("1 document inserted");
-							db.close();
-						});
-					});
+			if (navigator.geolocation) {
+    			navigator.geolocation.getCurrentPosition(showPosition);
+  			}
+			function showPosition(position) {
+  				let latlon = position.coords.latitude + "," + position.coords.longitude;
+			const { MongoClient } = require('mongodb');
+			async function main() {
+    			const uri = "mongodb+srv://dandan010:dkssud010@cluster0.7c00ea1.mongodb.net/?retryWrites=true&w=majority";
+    			const client = new MongoClient(uri);
+    			try {
+       			 // Connect to the MongoDB cluster
+        			await client.connect();
+        			await createListing(client,
+            			{
+                			name: "Lovely Loft",
+                			summary: "A charming loft in Paris",
+                			bedrooms: 1,
+                			bathrooms: 1
+            			}
+        			);
+    			} catch (e) {
+        			console.error(e);
+    			} finally {
+        			await client.close();
+    			}
+			}
+		}
 		</script>
 		
 		<!--if user allows location, continue -->
